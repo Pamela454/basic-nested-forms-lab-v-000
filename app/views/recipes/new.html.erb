@@ -3,8 +3,8 @@
   <%= r.text_field :title %><br>
 
   <%= r.fields_for :ingredients do |ing| %>
-    <%= ing.label :name_0 %>
-    name: <%= ing.text_field :name_0 %><br>
+    <%= ing.label :name %>
+    name: <%= ing.text_field :name %><br>
 
     <%= ing.label :quantity %>
     qty: <%= ing.text_field :quantity %><br>
