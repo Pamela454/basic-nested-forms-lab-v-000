@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
-    if @recipe.ingredients.last.try(:name)
+    if @recipe.ingredients.last.try(:name) #method chainging. 
       @recipe.ingredients.build
     end
   end
