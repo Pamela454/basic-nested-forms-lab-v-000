@@ -7,7 +7,7 @@
     name: <%= ing.text_field :name %><br>
 
     <%= ing.label :quantity %>
-    qty: <%= ing.text_field :quantity %><br>
+    qty: <%= ing.integer :quantity %><br>
 
   <% end %>
   <%= link_to 'add ingredient', @recipe %>
