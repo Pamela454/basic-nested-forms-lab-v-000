@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-  class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     if @recipe.ingredients.last.try(:name)
