@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
-    if @recipe.ingredients.last.try(:name) #method chainging. 
+    if @recipe.ingredients.last.try(:name) #method chaining. try method returns nil if used on nil object. 
       @recipe.ingredients.build
     end
   end
