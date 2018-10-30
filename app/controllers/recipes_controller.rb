@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
-    if @recipe.ingredients.last.try(:name) #method chaining. try method returns nil if used on nil object. tries to get attribute value if caller object is not nil. 
+    if @recipe.ingredients.last.try(:name) #method chaining. try method returns nil if used on nil object. tries to get attribute value if caller object is not nil.
       @recipe.ingredients.build
     end
   end
@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-    2.times { @recipe.ingredients.build }
+    2.times { @recipe.ingredients.build }  #run command 2 times in a row. 
   end
 
   def create
